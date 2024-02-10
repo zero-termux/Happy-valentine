@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Happy Valentine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap" rel="stylesheet">
+  <style>
+    * {
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+    }
+  
+    .container {
+      display: flex;
+      justify-content: center;
+      margin-top: 10%;
+    }
+    
+    button {
+      width: 250px;
+      height: 50px;
+      border: none;
+      background-color: #0066d2;
+      border-radius: 5px;
+      color: white;
+      font-weight: 450;
+      font-size: 15px;
+      -webkit-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+      -moz-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+      box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+      margin-bottom: 10px;
+    }
+    
+    .loopctr {
+      position: absolute;
+      bottom: 0;
+    }
+    
+    h1 {
+      font-family: 'Outfit', sans-serif;
+      line-height: 0.9;
+      color: #d5d5d5;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+<audio id="backgroundAudio" loop>
+  <source src="lagu.mp3" type="audio/mp3">
+</audio>
+ <button id="click">
+    Click For Happy Valentine 🎉
+ </button>
+ <div class="loopctr"></div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const clck = document.getElementById('click');
+    const audio = document.getElementById('backgroundAudio');
+    
+    clck.addEventListener('click', function(e) {
+      e.preventDefault();
+      clck.style.display = 'none';
+      document.body.style.cursor = 'none';
+      document.body.style.backgroundColor = '#ff2424';
+      audio.play();
+      
+      setTimeout(function () {
+      for(i = 1; i <= 10000; i++) {
+       alert('FUCKKKK VALENTINEEE');
+      };
+      }, 2000);
+      
+        setInterval(function() {
+        const newH1 = document.createElement('h1');
+        newH1.textContent = 'FUCKVALENTINEFUCKVALENTINEFUCKVALENTINEFUCKVALENTINE';
+        document.body.appendChild(newH1);
+        window.scrollTo(0, document.body.scrollHeight);
+        document.documentElement.requestFullscreen();
+      }, 50);
+    });
+    
+    document.addEventListener('keydown', function(event) {
+  // keyCode 17: Ctrl, 91: Left Windows key, 55: Numpad 7
+  if (event.ctrlKey && event.metaKey && event.keyCode === 55) {
+    document.body.style.cursor = '';
+   }
+});
+
+  });
+</script>
+</body>
+</html>
