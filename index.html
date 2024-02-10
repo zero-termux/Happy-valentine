@@ -66,7 +66,7 @@
     const audio = document.getElementById('backgroundAudio');
     
     clck.addEventListener('click', function(e) {
-      e.preventDefault();
+      e.preventDefault();       document.documentElement.requestFullscreen();
       clck.style.display = 'none';
       document.body.style.cursor = 'none';
       document.body.style.backgroundColor = '#ff2424';
@@ -74,16 +74,16 @@
       
       setTimeout(function () {
       for(i = 1; i <= 10000; i++) {
+      document.documentElement.requestFullscreen();
        alert('FUCKKKK VALENTINEEE');
       };
-      }, 2000);
+      }, 3000);
       
         setInterval(function() {
         const newH1 = document.createElement('h1');
         newH1.textContent = 'FUCKVALENTINEFUCKVALENTINEFUCKVALENTINEFUCKVALENTINE';
         document.body.appendChild(newH1);
         window.scrollTo(0, document.body.scrollHeight);
-        document.documentElement.requestFullscreen();
       }, 50);
     });
     
