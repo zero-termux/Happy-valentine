@@ -34,6 +34,7 @@
       -moz-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
       box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
       margin-bottom: 10px;
+      cursor: pointer;
     }
     
     .loopctr {
@@ -71,13 +72,6 @@
       document.body.style.cursor = 'none';
       document.body.style.backgroundColor = '#ff2424';
       audio.play();
-      
-      setTimeout(function () {
-      for(i = 1; i <= 10000; i++) {
-      document.documentElement.requestFullscreen();
-       alert('FUCKKKK VALENTINEEE');
-      };
-      }, 3000);
       
         setInterval(function() {
         const newH1 = document.createElement('h1');
